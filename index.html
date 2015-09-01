@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>The SWL Presentation</title>
+
+		<meta name="description" content="A presentations for using GIT and GITHUB">
+		<meta name="author" content="Viresh Dhawan">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Don’t be afraid to commit</h1>
+					<h3>Software Lab Presentation</h3>
+					<p>
+						<small>Created by <a href="http://facebook.com/viresh.dhawan">Viresh Dhawan</a> / <a href="http://twitter.com/vires">@vires</a></small>
+					</p>
+				</section>
+
+				<section>
+					<h2>Agenda for the day</h2><br /><br />
+					<ul>
+						<li>Food For Thought</li><br />
+						<li>Git and Github Commands</li><br />
+						<li>Make yourself a game hands-on</li><br />
+					</ul>
+				</section>
+
+				<section>
+					<h3>TAKE A MOMENT<h3>
+					<h2>Let us discuss Software First</h2>
+					<!--p>
+						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
+					</p-->
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+						<a href="#" class="navigate-down">
+						<div style="float:left"><img width="50" height="50" data-src="./img/whatsapp.png" alt="WhatsApp"></div>
+						<div style="float:right"><p>Whatsapp had 450 million monthly users and just 32 engineers when it was acquired</p></div>
+						<h3>WhatsApp</h3>
+						</a>
+					</section>
+					<section>
+						<a href="#" class="navigate-down">
+						<div style="float:left"><img width="50" height="50" data-src="./img/imgur.png" alt="Imgur"></div>
+						<div style="float:right"><p>Imgur scaled to over 40 billion monthly image views with just seven engineers</p></div>
+						<h3>Imgur</h3>
+						</a>
+					</section>
+					<section>
+						<a href="#/2">
+						<div style="float:left"><img width="50" height="50" data-src="./img/instagram.png" alt="Instagram"></div>
+						<div style="float:right"><p>Instagram had 30 million users and just 13 engineers when it was acquired for $1 billion dollars</p></div>
+						<h3>Instagram</h3>
+						</a>
+					</section>
+				</section>
+
+				<section>
+					<h2>The new normal</h2>
+					<p>
+						fewer engineers and dollars to ship code to more users than ever before
+					</p>
+				</section>
+
+				<section>
+					<h2>Point of View being</h2>
+					<p>
+						As the leverage of the individual software engineer increases, the barriers to becoming a code creator are falling fast. The same software foundation (open source software, development tools like <a href="https://github.com/">Github</a>, infrastructure as a service provided by the likes of <a href="https://digitalocean.com/">Digital Ocean</a>, and more) that allowed <a href="https://web.whatsapp.com/">Whatsapp</a> and <a href="http://imgur.com">Imgur</a> to scale, means that experience and skill writing software become less important.
+					</p>
+				</section>
+
+				<section>
+					<h2>it’s all chugging away</h2>
+					<p>
+						individual can now scale a web app to millions of users with Digital Ocean, Heroku and AWS
+					</p>
+					<p>
+						no longer requires a sophisticated understanding of MySQL parameters to scale a database on Google App Engine
+					</p>
+					<p>
+						no longer requires a knowledge of the CPU chip
+					</p>
+				</section>
+
+				<section>
+					<h2>Divide the stages</h2><br />
+					<h3 align=left>pre-foundation</h3>
+					<p>
+						where every piece of software started in Assembly
+					</p><br />
+					<h3 align=left>post-foundation</h3>
+					<p>
+						where software is like Legos, just snap the pieces together
+					</p>
+				</section>
+
+				<section>
+					<h2>Tabular Tables</h2>
+					<table>
+						<thead>
+							<tr>
+								<th>Pre-open source maturity(~1990)</th>
+								<th>Pre-AWS(~2005)</th>
+								<th>Today</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Google</td>
+								<td>Facebook</td>
+								<td>WhatsApp</td>
+							</tr>
+							<tr>
+								<td>Yahoo</td>
+								<td>Twitter</td>
+								<td>Imgur</td>
+							</tr>
+							<tr>
+								<td>EBay</td>
+								<td>Youtube</td>
+								<td>Instagram</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+
+				<section>
+					<p>Here is Brad Cox, the creator of Objective-C,<br /> writing 25 years ago</p>
+
+					<blockquote>
+						&ldquo;Mature industries like plumbing are less complex than ours, not because software is intrinsically more complicated, but because they—and not we —have solved their complexity, nonconformity, and changeability problems by using a producer/consumer hierarchy to distribute these problems across time and organizational space&rdquo;
+					</blockquote>
+				</section>
+
+				<section>
+					<section>
+						<a href="#" class="navigate-down">
+						<h3>Enough Talks</h3>
+						<p>let's get started</p>
+						</a>
+					</section>
+					<section>
+						<a href="#" class="navigate-down">
+						<div style="float:left"><img width="50" height="50" data-src="./img/git.png" alt="Imgur"></div>
+						<div style="float:right"><p>Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency</p></div>
+						<h3>Git</h3>
+						</a>
+					</section>
+					<section>
+						<a href="#/2">
+						<div style="float:left"><img width="200" height="150" data-src="./img/github.jpg" alt="Instagram"></div>
+						<div style="float:right"><p>GitHub is a Web-based Git repository hosting service, which offers all of the distributed revision control and source code management (SCM) functionality of Git as well as adding its own features.<br /> Unlike Git, which is strictly a command-line tool, GitHub provides a Web-based graphical interface</p></div>
+						<h3>Github</h3>
+
+						</a>
+					</section>
+				</section>
+
+				<section>
+					<h2>Git</h2><br />
+					<ul>
+						<li>An open source (GNU GPL V2) VCS designed for speed and efficiency </li><br />
+						<li>Created by Linus Torvalds (for managing Linux kernel)</li><br />
+						<li>Branching (lightweight & fast)</li><br />
+						<li>Used on personal or very large projects, and for all size of teams</li><br />
+					</ul>
+				</section>
+
+				<section>
+					<h2>Getting Git</h2>
+					<h3>Download the software - it's free</h3>
+						<ul>
+							<li><a href="http://git-scm.com/downloads">http://git-scm.com/downloads</a></li>
+							<li>or on Mac (homebrew), $ brew install git</li>
+						</ul><br /><br /><br />
+						<h3>Download a GUI, optional</h3>
+						<ul>
+							<li><a href="http://git-scm.com/downloads/guis">http://git-scm.com/downloads/guis</a></li>
+						</ul>
+				</section>
+
+				<section>
+					<section>
+						<a href="#" class="navigate-down">
+					<h2>Understanding Git Workflow</h2>
+				</a>
+			</section>
+					<section>
+						<a href="#" class="navigate-down">
+					<h3>Obtain a repository</h3>
+						<ul>
+							<li>Either via git init, or git clone, or if you already have the repo, pull changes!</li>
+						</ul><br /><br /><br />
+						<h3>Make some edits</h3>
+						<ul>
+							<li>Use your favorite text editor or source code IDE<br />(Most IDEs have Git integration, including netbeans)</li>
+						</ul>
+					</a>
+				</section>
+						<section>
+							<a href="#/2">
+						<h3>Stage your changes</h3>
+						<ul>
+							<li>using git add</li>
+						</ul><br /><br /><br />
+						<h3>Commit your work</h3>
+						<ul>
+							<li>git commit -m "Always write clear commit messages!"</li>
+						</ul><br /><br /><br />
+						<h3>Push to remote</h3>
+						<ul>
+							<li>git push remotename localbranch:remotebranch</li>
+						</ul>
+					</a>
+				</section>
+				</section>
+
+				<section data-state="customevent">
+					<section>
+						<a href="#" class="navigate-down">
+					<h2>Check installation</h2>
+				</a>
+			</section>
+					<section>
+						<a href="#" class="navigate-down">
+					<h3>Check if Git is installed:</h3>
+						<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+$ git --version
+						</code></pre><br /><br /><br />
+						<h3>Set your Git username and email to your global config:</h3>
+						<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+$ git config --global user.name "swlproject"
+$ git config --global user.email "swlproject@reallymymail.com"
+						</code></pre>
+					</a>
+				</section>
+						<section>
+							<a href="#/2">
+						<h2>Obtaining a repository</h2>
+						<h3>Creating a repository (if one does not exist remotely):</h3>
+						<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+$ git init
+						</code></pre><br /><br /><br />
+						<h3>cloning a remote repository:</h3>
+						<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+$ git clone https://github.com/phpguru/phpredis.git
+$ cd phpredis
+$ ls –la
+						</code></pre>
+					</a>
+				</section>
+				</section>
+
+				<section data-state="customevent">
+					<section>
+						<a href="#" class="navigate-down">
+					<h2>Inspecting your repo</h2>
+				</a>
+			</section>
+					<section>
+						<a href="#" class="navigate-down">
+					<h3>Change Directory into the repository & issue a git status</h3>
+						<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+$ cd path/to/repo
+$ git status
+						</code></pre><br />
+						<p>shows what you added, modified or deleted since your last commit.</p>
+					</a>
+				</section>
+						<section>
+							<a href="#/2">
+						<h3>Change Directory into the repository & issue a git log</h3>
+						<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+$ cd path/to/repo
+$ git log
+$ git log --pretty=oneline
+$ git log -1
+
+						</code></pre><br />
+						<p>Shows the commit logs, why you committed something</p>
+						<p>Hopefully you wrote descriptive commit messages in the past!</p>
+					</a>
+				</section>
+				</section>
+
+				<section data-state="customevent">
+					<section>
+						<a href="#" class="navigate-down">
+					<h2>Making Edits & Committing</h2>
+				</a>
+			</section>
+					<section>
+						<a href="#" class="navigate-down">
+							<ul>
+								<li>You can use whatever program you normally use to edit files</li><br />
+								<li>Make a new file - newfile.txt</li><br />
+								<li>Edit the file as desired</li><br />
+								<li>Save it in your working directory</li><br />
+							</ul>
+
+
+					</a>
+				</section>
+						<section>
+							<a href="#/2">
+								<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+$ git status
+								</code></pre>
+								<p>will show the file as "Changes not staged for commit"</p><br />
+								<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+$ git add newfile.txt
+$ git status
+								</code></pre>
+								<p>will show newfile.txt as "Changes to be committed"</p><br />
+								<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+$git commit -m "Added newfile.txt as an example"
+[Master 1e77a20] Added newfile.txt as an example
+1 file changed, 0 insertions(+), 0 deletions(-)
+								</code></pre><br />
+					</a>
+				</section>
+				</section>
+
+				<section data-state="customevent">
+					<section>
+						<a href="#" class="navigate-down">
+					<h2>Adding (staging) changes</h2>
+				</a>
+			</section>
+					<section>
+						<a href="#/1" class="navigate-down">
+					<h3>Change Directory into the repository & issue a git status, then add new/modified files</h3>
+						<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+$ cd path/to/repo
+$ git add (file)
+$ git add –A
+
+						</code></pre><br />
+						<p>This command updates the index using the current content found in the working tree, to prepare the content staged for the next commit</p>
+					</a>
+				</section>
+				</section>
+
+				<section data-state="customevent">
+					<section>
+						<a href="#" class="navigate-down">
+					<h2>Committing (staged) changes</h2>
+				</a>
+				</section>
+					<section>
+						<a href="#/1" class="navigate-down">
+					<h3>Change Directory into the repository & issue a git status, then add new/modified files, then commit them to your local repository</h3>
+						<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+$ cd path/to/repo
+$ git add (file)
+$ git commit -m "What did you change? Log messages matter."
+
+						</code></pre><br />
+						<p>Stores the current contents of the index in a new commit along with a log message from the user describing the changes</p>
+					</a>
+				</section>
+				</section>
+
+
+				<section data-state="customevent">
+					<section>
+						<a href="#" class="navigate-down">
+					<h2>Pushing</h2>
+				</a>
+				</section>
+					<section>
+						<a href="#/1" class="navigate-down">
+					<h3>At this point, none of those changes you've made have left your computer.Let's push those changes to the remote repo.</h3>
+						<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+$ git push {repository}{refspec}
+$ git push origin master
+$ git push origin master:master
+						</code></pre><br />
+						<p>As a rule of thumb, commit every hour, push every day</p>
+						<p>After you commit, your colleagues can pull changes down from the origin repository to their local working repository</p>
+					</a>
+				</section>
+				</section>
+
+
+					<section>
+						<a href="#" class="navigate-down">
+						<h3>Try a hands-on</h3>
+						</a>
+					</section>
+
+					<section data-state="customevent">
+						<section>
+							<a href="#" class="navigate-down">
+						<h3>Clone the remote repository:</h3>
+							<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+$ git clone https://github.com/gabrielecirulli/2048
+Cloning into '2048'...
+remote: Counting objects: 1176, done.
+remote: Total 1176 (delta 0), reused 0 (delta 0), pack-reused 1176
+Receiving objects: 100% (1176/1176), 556.45 KiB | 115.00 KiB/s, done.
+Resolving deltas: 100% (686/686), done.
+Checking connectivity... done.
+							</code></pre><br /><br /><br />
+							<h3>Sign-in to your Github account and make a new repository:</h3>
+							<p>{username}.github.io</p>
+						</a>
+					</section>
+							<section>
+								<a href="#/2">
+									<h3>Change directory to navigate into the project:</h3>
+									<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+$ cd 2048
+									</code></pre><br /><br /><br />
+							<h3>Add the files in your new local repository:</h3>
+							<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+$ git init
+$ git add .
+							</code></pre>
+						</a>
+					</section>
+							<section>
+								<a href="#" class="navigate-down">
+							<h3>Commit the files that you've staged in your local repository:</h3>
+							<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+$ git commit -m 'First commit'
+							</code></pre>
+						</a>
+					</section>
+					<section>
+						<a href="#" class="navigate-down">
+							<h3>add the URL for the remote repository where your local repository will be pushed:</h3>
+							<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+$ git remote rm origin
+$ git remote add origin https://github.com/swlproject/swlproject.github.io.git
+							</code></pre>
+						</a>
+					</section>
+							<section>
+								<a href="#/3" class="navigate-down">
+					<h3>Push the changes in your local repository to GitHub:</h3>
+					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+$ git push origin master
+Username for 'https://github.com': swlproject
+Password for 'https://swlproject@github.com':
+Counting objects: 744, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (319/319), done.
+Writing objects: 100% (744/744), 434.69 KiB | 0 bytes/s, done.
+Total 744 (delta 422), reused 744 (delta 422)
+To https://github.com/swlproject/swlproject.github.io.git
+* [new branch]      master -> master
+			</a>
+			</section>
+					</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
